@@ -39,12 +39,16 @@ export const login = async (email, password) => {
 
 }
 
-export const getCommits = async () => {
+export const getCommits = async (githubURL) => {
 
     try {
         const data = await axios({
             method: "GET",
-            url: `${environment}${process.env.REACT_APP_API_ENDPOINT_COMMITS}?url=${process.env.REACT_APP_REPOSITORY_URL}`,
+            url: 
+                githubURL ? 
+                    `${environment}${process.env.REACT_APP_API_ENDPOINT_COMMITS}?url=${githubURL}`
+                    :
+                    `${environment}${process.env.REACT_APP_API_ENDPOINT_COMMITS}?url=${process.env.REACT_APP_REPOSITORY_URL}`,
             headers:{
                 "Content-Type": "application/json"
             }

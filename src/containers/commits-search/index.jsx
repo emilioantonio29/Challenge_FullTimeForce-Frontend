@@ -5,7 +5,7 @@ import CommitsTableComponent from "../../components/user/commits-table";
 import { UserGlobalContextMemorySpace } from "../../contexts/user-context";
 import CommonSpacer from "../../components/common/spacer";
 
-const CommitsContainer = () => {
+const CommitsSearchContainer = (props) => {
 
     const error400 = process.env.REACT_APP_COMMITS_MESSAGE_400;
     const error404 = process.env.REACT_APP_COMMITS_MESSAGE_404;
@@ -15,21 +15,24 @@ const CommitsContainer = () => {
     const [commits, setCommits] = useState(null);
     const [errorMsg, setErrorMsg] = useState("");
 
-    const searchCommits = async () => {
-        
+    const searchCommits = async (url) => {
+
         setErrorMsg("");
 
         setLoader(true);
 
-        let res = await getCommits();
+        let res = await getCommits(url);
         
         if (res?.status == 200 && res.data) {
             setCommits(res.data);
         } else if (res?.response?.status == 400) {
+            setCommits(null);
             setErrorMsg(res?.response?.data?.message || error400)
         } else if (res?.response?.status == 404) {
+            setCommits(null);
             setErrorMsg(res?.response?.data?.message || error404)
         }else {
+            setCommits(null);
             setErrorMsg(error500);
         }
 
@@ -38,12 +41,14 @@ const CommitsContainer = () => {
 
     useEffect(() => {
         //Mount:
-        searchCommits();
+        if(props.url){
+            searchCommits(props.url);
+        }
 
         return () => {
         //Unmount
         };
-    }, []);
+    }, [props]);
 
   return (
     <>
@@ -65,4 +70,4 @@ const CommitsContainer = () => {
   );
 };
 
-export default CommitsContainer;
+export default CommitsSearchContainer;

@@ -115,4 +115,8 @@ tr:nth-child(odd) {
     padding-left: 15px;
     font-weight: bold;
   }
+
+  .commit-button {
+    display: none;
+  }
 }

@@ -12,6 +12,8 @@ const LoginContainer = () => {
 
     const error500 = process.env.REACT_APP_LOGIN_MESSAGE_500;
     const error404 = process.env.REACT_APP_LOGIN_MESSAGE_404;
+    const invalidEmail = process.env.REACT_APP_LOGIN_MESSAGE_INVALID_EMAIL;
+    const requiredData = process.env.REACT_APP_LOGIN_MESSAGE_REQUIRED_DATA;
 
     const [loader, setLoader] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
@@ -23,17 +25,17 @@ const LoginContainer = () => {
         setErrorMsg("");
 
         if(!email || !password){
-            setErrorMsg("• Por favor ingresa usuario y contraseña para iniciar sesión.")
+            setErrorMsg(requiredData)
         }else{
             if(emailValidator(email)){
-                setErrorMsg("• Por favor ingresa un formato de email valido")
+                setErrorMsg(invalidEmail)
             }else{
 
                 setLoader(true);
                 localStorage.clear();
 
                 let res = await login(email, password);
-                console.log(res)
+                
                 if(res?.status == 200 && res.data){
                     setUser(res.data);
                 }else if(res?.response?.status == 404){

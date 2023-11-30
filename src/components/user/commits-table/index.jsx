@@ -1,17 +1,7 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import CommitTableButtonComponent from '../commit-table-button';
 
 const CommitsTableComponent = (props) => {
-
-    const [copySuccess, setCopySuccess] = useState('Copy to clipboard');
-
-    const copyToClipboard = (sha) => {
-        navigator.clipboard.writeText(sha)
-        setCopySuccess("Copied")
-        setTimeout(() => {
-            setCopySuccess('Copy to clipboard');
-        }, 4000);
-    };
 
     return (
         <>

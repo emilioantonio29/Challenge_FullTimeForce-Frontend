@@ -33,7 +33,7 @@ const CommitTableButtonComponent = (props) => {
             <div className='d-flex align-items-center'>
                 <button 
                     onClick={()=>{copyToClipboard(props.sha)}} 
-                    className="btn btn-primary btn-sm"
+                    className="btn btn-primary btn-sm commit-button"
                     type="button">{copySuccess}
                 </button>
             </div>
