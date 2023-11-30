@@ -14,6 +14,10 @@ export const UserGlobalContext = ({children}) =>{
 
     useEffect(()=>{
         //Mount: 
+        console.log("user")
+        setTimeout(() => {
+            setMainLoader(false);
+        }, 2000);
 
         return () =>{
         //Unmount
