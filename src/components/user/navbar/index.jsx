@@ -31,7 +31,7 @@ const NavbarComponent = () => {
                 <div style={{width: "100%"}}>
                 <ul className="navbar-nav ">
                     <li className="nav-item close-session" style={{width: "100%"}}>
-                    <NavLink onClick={logout}  className={"text-link text-link-m"}>Cerrar Sesión</NavLink>
+                    <NavLink onClick={logout}  className={"text-link text-link-m"}>Sign out</NavLink>
                     </li>
                 </ul>
                 </div>

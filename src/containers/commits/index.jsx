@@ -19,10 +19,10 @@ const CommitsContainer = () => {
         setLoader(true);
 
         let res = await getCommits();
-
+        
         if (res?.status == 200 && res.data) {
             setCommits(res.data);
-        } else if (res.response.status == 404) {
+        } else if (res?.response?.status == 404) {
             setErrorMsg("• No se encontraron permisos.");
         } else {
             setErrorMsg("• Error inesperado.");

@@ -1,4 +1,5 @@
 import React, {useContext, useState} from 'react';
+import CommitTableButtonComponent from '../commit-table-button';
 
 const CommitsTableComponent = (props) => {
 
@@ -12,7 +13,6 @@ const CommitsTableComponent = (props) => {
         }, 4000);
     };
 
-    console.log("props", props.commits)
     return (
         <>
             {props.commits?
@@ -31,8 +31,7 @@ const CommitsTableComponent = (props) => {
                                     <td scope="">
                                         {data.commit.message} 
                                         <br/> 
-                                        <span className="input-group-text">JWT Id Token Generated:</span>
-                                        <br/>
+                                        <CommitTableButtonComponent sha={data.sha}/>
                                         <div style={{width:"100%"}}>
                                             <span style={{fontSize:"12px", fontWeight:"bold"}}>{data.commit.author.name}</span>
                                             <span style={{fontSize:"12px"}}> commited {data.commit.author.date.slice(0, 10)}</span>

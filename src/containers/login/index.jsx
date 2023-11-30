@@ -10,6 +10,9 @@ const LoginContainer = () => {
 
     const {user, setUser} = useContext(UserGlobalContextMemorySpace);
 
+    const error500 = process.env.REACT_APP_LOGIN_MESSAGE_500;
+    const error404 = process.env.REACT_APP_LOGIN_MESSAGE_404;
+
     const [loader, setLoader] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
     const [email, setEmail] = useState("");
@@ -30,13 +33,13 @@ const LoginContainer = () => {
                 localStorage.clear();
 
                 let res = await login(email, password);
-
+                console.log(res)
                 if(res?.status == 200 && res.data){
                     setUser(res.data);
-                }else if(res.response.status == 404){
-                    setErrorMsg("• El usuario o la contraseña son incorrectos.")
+                }else if(res?.response?.status == 404){
+                    setErrorMsg(res?.response?.data?.message || error404)
                 }else{
-                    setErrorMsg("• Detectamos un error en el inicio de sesión. Por favor intenta nuevamente en breves minutos.")
+                    setErrorMsg(error500)
                 }
 
                 setLoader(false);
