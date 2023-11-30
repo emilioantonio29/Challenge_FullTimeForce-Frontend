@@ -1,6 +1,7 @@
 import React from 'react';
-import {BiSolidBank} from 'react-icons/bi'
+import {BiSolidBank} from 'react-icons/bi';
 import logo from "../../../assets/fulltimeforce.svg"
+
 
 const CommonMainLoader = () => {
     return (

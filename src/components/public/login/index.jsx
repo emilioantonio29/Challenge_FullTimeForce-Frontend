@@ -11,7 +11,7 @@ const LoginComponent = () => {
         <section className={`${styles.sectionLogin} d-flex align-items-center`}>
             <div className="d-flex align-items-center" style={{width:"100%"}}>
                 <div className={`${styles.loginBox} d-flex justify-content-center`}>
-                    <div className={`jumbotron bg-light ${styles.jumbotronLogin} d-flex flex-column justify-content-center`}>
+                    <div className={`bg-light ${styles.jumbotronLogin} d-flex flex-column justify-content-center`}>
                         <div className="d-flex justify-content-center">
                             <img src={logo} className={`${styles.AppLogo}`} alt="logo" />
                         </div>

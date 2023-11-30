@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* GENERAL STYLE SETTINGS */
+
+.link-noStyle{
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  color: rgb(42, 42, 113)
+}
+
+.link-noStyle:hover {
+  text-decoration: none;
+  color: rgb(6, 6, 48);
+  font-weight: 500;
+}
+
+.Footer-general{
+  background-color: #000d4e;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 5vh;
+}
+
+.Min-height-footer{
+  min-height: 5vh;
+  color: white;
+}
+

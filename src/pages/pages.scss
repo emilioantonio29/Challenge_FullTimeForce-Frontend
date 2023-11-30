@@ -1,0 +1,67 @@
+@use '../assets/styles/colors' as color;
+
+.jumbotron{
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, color.$color-font-main 0%, rgba(255,255,255,1) 100%); }
+    
+
+.submenu {
+    overflow: hidden;
+    background-color: null;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.submenu-link-active{
+    background-color: color.$color-font-main !important;
+    color: white !important;
+    background: none;
+    color: inherit;
+    border: none;
+    // padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+  
+.submenu .submenu-link {
+    float: left;
+    font-size: 16px;
+    color: color.$color-font-main;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background: none;
+    color: inherit;
+    border: none;
+    // padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    
+}
+
+.submenu .submenu-link:hover {
+    background-color: color.$color-font-grey; 
+}
+
+.color-weight{
+    color: color.$color-weight;
+}
+.color-light{
+    color: color.$color-light;
+}
+.color-common{
+    color: color.$color-common;
+}
+.color-font-main{
+    color: color.$color-font-main;
+}
+.color-font-normal{
+    color: color.$color-font-normal;
+}
+.color-font-grey{
+    color: color.$color-font-grey;
+}
+.color-font-lgrey{
+    color: color.$color-font-lgrey;
+}
