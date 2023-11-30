@@ -3,6 +3,9 @@ $color-light:       rgb(179, 185, 238);
 $color-common:      rgb(37, 46, 155);
 $color-font-main:   #000d4e;
 $color-font-normal: #446da2;
+$color-font-grey:   #a6aab6;
+$color-font-lgrey:  #f3f3f1;
+
 
 :export {
     color-weight:       $color-weight;
@@ -10,4 +13,6 @@ $color-font-normal: #446da2;
     color-common:       $color-common;
     color-font-main:    $color-font-main;
     color-font-normal:  $color-font-normal;
+    color-font-grey:    $color-font-grey;
+    color-font-lgrey:   $color-font-lgrey;
 }

@@ -14,7 +14,7 @@ const Navigator = () => {
             {mainLoader ? <CommonMainLoader/>
             :
             <BrowserRouter>
-            {!user?.username ?
+            {!user?.email ?
 
                 /* STACK NOT LOGGED IN */
                 <PublicStack/>

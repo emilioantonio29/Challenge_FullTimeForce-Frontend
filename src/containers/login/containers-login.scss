@@ -1,0 +1,40 @@
+@use '../../assets/styles/colors' as color;
+
+.input-login{
+    width: 400px;
+}
+
+.input-submit{
+    background-color: color.$color-font-main;
+    border: 0px solid;
+}
+
+.input-submit:hover{
+    background-color: color.$color-font-normal;
+    border: 0px solid;
+}
+
+.fontColorMain{
+    color: color.$color-font-main;
+}
+
+@media only screen and (max-width: 1600px){
+
+    .input-login{
+        width: 280px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+    .input-login{
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 300px){
+
+    .input-login{
+        width: 230px;
+    }
+}

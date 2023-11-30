@@ -1,13 +1,10 @@
 import React, {useContext} from 'react';
+import LoginComponent from '../../components/public/login';
 
 const LoginPage = () => {
 
     return (
-        <>
-
-            <h1>LOGIN PAGE</h1>
-        
-        </>
+        <LoginComponent/>
     );
 }
 

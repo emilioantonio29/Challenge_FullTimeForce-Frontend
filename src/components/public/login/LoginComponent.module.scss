@@ -1,0 +1,47 @@
+@use '../../../assets/styles/colors' as color;
+
+.sectionLogin{
+    height: 100vh;
+    width: 100vw;
+}
+
+.jumbotronLogin{
+    border-radius: 20px;
+    padding: 30px;
+    width: 50%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, color.$color-font-main 100%); 
+}
+
+.AppLogo{
+    height: 5vh;
+}
+
+.fontColorGrey{
+    color: color.$color-font-lgrey;
+}
+
+.loginBox{
+    width: 50vw;
+}
+
+@media only screen and (max-width: 1200px){
+
+    .jumbotronLogin{
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+
+    .loginBox{
+        width: 100vw;
+    }
+    
+    .sectionLogin{
+        background-image: url("../../../assets/fulltimeforceOffice.jpg");
+        background-size: cover;
+    }
+
+}
