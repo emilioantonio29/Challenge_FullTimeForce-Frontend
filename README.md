@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# [FullTimeForce](https://www.fulltimeforce.com/) FRONT END CHALLENGE
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Instructions
 
 In the project directory, you can run:
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+$ npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Runs the app in the development mode
 
-### `npm test`
+```bash
+$ npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Builds the app for production to the build folder
 
-### `npm run build`
+```bash
+$ npm run build
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Login: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application requires a login with email and password. Please use one of the following mocked users provided by the backend.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+[
+    { email: 'user1@example.com', password: 'password1', name: "user1", age: 31 },
+    { email: 'user2@example.com', password: 'password2', name: "user2", age: 32  },
+    { email: 'user3@example.com', password: 'password3', name: "user3", age: 33  },
+    { email: 'user4@example.com', password: 'password4', name: "user4", age: 34  },
+    { email: 'user5@example.com', password: 'password5', name: "user5", age: 35  },
+    { email: 'user6@example.com', password: 'password6', name: "user6", age: 36  },
+    { email: 'user7@example.com', password: 'password7', name: "user7", age: 37  },
+    { email: 'user8@example.com', password: 'password8', name: "user8", age: 38  },
+    { email: 'user9@example.com', password: 'password9', name: "user9", age: 39  },
+    { email: 'user10@example.com', password: 'password10', name: "user10", age: 40 },
+]
+```
 
-### `npm run eject`
+## UserStack: 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After logging in, you will have access to two screens. The first one displays the commit history of the [backend](https://github.com/emilioantonio29/Challenge_FullTimeForce-Backend) repository, and the second one allows you to search for commit history by entering a GitHub repository URL.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenge Instructions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The goal of this test will be to create an app that shows git commit history on the same public repository you are working on. You need to do well-stated and defined commits while working on this test and regularly push them up. No need to make the app able to access a private repository.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You will need to sign up for a free GitHub account if you do not already have one, then create a public repository to store your work so that we will be able to see and review it. You can find documentation on the GitHub API here: https://developer.github.com/v3/.
 
-## Learn More
+Choose the frontend and backend technologies that best suit your skill set in order to build the solution, Angular, Vue, or React frameworks or even Flutter, Swift or Android, if you like Mobile development. Pair them up with NodeJS, Python, or .Net, to create the perfect backbone. Use all the technologies and skills that you want to showcase, but don't forget you must show on UI the methods that were worked on the backend.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Requirements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. You must use the GitHub API - while you could make a scraper or devise another method to get the git commit history of your project, we would like to see how you work with an existing API.
+2. Your GitHub repository must be public - this will allow us to look at it and verify the accuracy of your code. Once you complete this project, you will need to send over the link of the project to me (take-home-test@fulltimeforce.com).
+3. The style of the page is up to you. Typically we use something like Tailwind CSS for a lot of our projects, then style it to meet the business want or need later on.
+4. The framework we usually use for the backend is NestJS. You can use any other framework if you want but avoid Express.
+5. The page does not need to be a real-time view (it’s okay for us to refresh it to get the latest commits on your repository).
+6. You MUST provide instructions in the README on how to install and run your project. We will not infer anything, and if you do not include these instructions, we will reject your submission.
+7. We measure the results based on completeness, code cleanliness, technology assortment, software design, use of testing and instructions quality given by the developer.
+8. You might want to use complex technologies when building this solution as we need to see what you are capable of.
