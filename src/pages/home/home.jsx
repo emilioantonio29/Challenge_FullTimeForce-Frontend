@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import CommonSpacer from '../../components/common/spacer';
 import '../pages.scss';
 import { useNavigate } from 'react-router-dom';
+import CommitsContainer from '../../containers/commits';
 
 const HomePage = (props) => {
 
@@ -25,10 +26,10 @@ const HomePage = (props) => {
             <div className="jumbotron bg-light" style={{borderRadius: "20px", marginTop: "20px"}}>
                 <div className="container">
                     <div className="d-flex justify-content-center">
-                        <h6 className="display-6 color-font-main" style={{alignText: "center", fontWeight: "bold"}}>test</h6>
+                        <h6 className="display-6 color-font-main" style={{alignText: "center", fontWeight: "bold"}}>Commits History</h6>
                     </div>
                     <CommonSpacer marginTop={"20px"}/>
-
+                    <CommitsContainer/>
                     
                 </div>
             </div>

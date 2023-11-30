@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.swal2-container {
+  z-index: 70000;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -65,3 +69,50 @@
   color: white;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255)
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  td {
+    text-align: left;
+    padding-left: 2%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-left: 15px;
+    font-weight: bold;
+  }
+}
